@@ -1,6 +1,5 @@
 const { Telegraf } = require("telegraf");
 const { getLatestVaccineData } = require("./cov-data");
-const { genChart, genVaccineChartConfig } = require("./chart-gen");
 
 const covBot = new Telegraf(process.env.BOT_TOKEN);
 
@@ -17,9 +16,15 @@ covBot.command("vaccine", async (ctx) => {
     console.log(err);
     await ctx.reply("Could not Fetch Data for State: " + state);
   });
-  if (!vaccineData) return;
-  const vaccineChartConfig = genVaccineChartConfig(vaccineData);
-  await ctx.replyWithPhoto({ source: genChart(vaccineChartConfig) });
+  if (!vaccineData)
+    await ctx.replyWithHTML(`<strong>${state}</strong>: No Data found!`);
+  else {
+    let dataHtml = "";
+    for (dataPoint in vaccineData) {
+      dataHtml += `<strong>${dataPoint}</strong>. ${vaccineData[dataPoint]}\n`;
+    }
+    await ctx.replyWithHTML(dataHtml);
+  }
 });
 
 module.exports = { covBot };
