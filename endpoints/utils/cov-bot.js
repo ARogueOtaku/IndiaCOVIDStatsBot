@@ -26,44 +26,44 @@ covBot.command("vaccine", async (ctx) => {
 
     dataHtml += `<strong>Males Vaccinated</strong>: ${
       vaccineData["Male(IndividualsVaccinated)"] || 0
-    } ${getPercent(
+    } [${getPercent(
       vaccineData["Male(IndividualsVaccinated)"] || 0,
       vaccineData["TotalIndividualsVaccinated"] || 0
-    )}%.\n`;
+    )}%].\n`;
     dataHtml += `<strong>Females Vaccinated</strong>: ${
       vaccineData["Female(IndividualsVaccinated)"] || 0
-    } ${getPercent(
+    } [${getPercent(
       vaccineData["Female(IndividualsVaccinated)"] || 0,
       vaccineData["TotalIndividualsVaccinated"] || 0
-    )}%.\n`;
+    )}%].\n`;
     dataHtml += `<strong>Transgenders Vaccinated</strong>: ${
       vaccineData["Transgender(IndividualsVaccinated)"] || 0
-    } ${getPercent(
+    } [${getPercent(
       vaccineData["Transgender(IndividualsVaccinated)"] || 0,
       vaccineData["TotalIndividualsVaccinated"] || 0
-    )}%.\n`;
+    )}%].\n`;
     dataHtml += `<strong>Total</strong>: ${
       vaccineData["TotalIndividualsVaccinated"] || 0
     }\n\n`;
 
     dataHtml += `<strong>18+ Vaccinated</strong>: ${
       vaccineData["18-45years(Age)"] || 0
-    } ${getPercent(
+    } [${getPercent(
       vaccineData["18-45years(Age)"] || 0,
       vaccineData["TotalIndividualsVaccinated"] || 0
-    )}%.\n`;
+    )}%].\n`;
     dataHtml += `<strong>45+ Vaccinated</strong>: ${
       vaccineData["45-60years(Age)"] || 0
-    } ${getPercent(
+    } [${getPercent(
       vaccineData["45-60years(Age)"] || 0,
       vaccineData["TotalIndividualsVaccinated"] || 0
-    )}%.\n`;
+    )}%].\n`;
     dataHtml += `<strong>60+ Vaccinated</strong>: ${
       vaccineData["60+years(Age)"] || 0
-    } ${getPercent(
+    } [${getPercent(
       vaccineData["60+years(Age)"] || 0,
       vaccineData["TotalIndividualsVaccinated"] || 0
-    )}%.\n`;
+    )}%].\n`;
     dataHtml += `<strong>Total</strong>: ${
       vaccineData["TotalIndividualsVaccinated"] || 0
     }\n\n`;
