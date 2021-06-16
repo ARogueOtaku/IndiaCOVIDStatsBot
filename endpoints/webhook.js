@@ -1,5 +1,5 @@
 require("dotenv").config();
-const { covBot } = require("../utils/cov-bot");
+const { covBot } = require("./utils/cov-bot");
 
 exports.handler = async (event) => {
   try {

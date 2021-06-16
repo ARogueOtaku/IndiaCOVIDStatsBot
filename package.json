@@ -1,5 +1,5 @@
 {
-  "name": "covidstats",
+  "name": "covbot",
   "version": "1.0.0",
   "description": "A Bot which Reports Covid Stats",
   "main": "./endpoints/webhook.js",
