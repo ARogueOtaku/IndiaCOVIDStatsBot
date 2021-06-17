@@ -48,16 +48,10 @@ function areSameStates(state1, state2) {
 }
 
 async function getLatestVaccineData(state) {
-  const vaccineDataResponse = await fetch(
-    "http://api.covid19india.org/csv/latest/cowin_vaccine_data_statewise.csv"
-  );
+  const vaccineDataResponse = await fetch("http://api.covid19india.org/csv/latest/cowin_vaccine_data_statewise.csv");
   const vaccineDataText = await vaccineDataResponse.text();
-  const allVaccineData = csvToJson
-    .fieldDelimiter(",")
-    .csvStringToJson(vaccineDataText);
-  const stateVaccineData = allVaccineData.filter((vaccineData) =>
-    areSameStates(vaccineData["State"], state)
-  );
+  const allVaccineData = csvToJson.fieldDelimiter(",").csvStringToJson(vaccineDataText);
+  const stateVaccineData = allVaccineData.filter((vaccineData) => areSameStates(vaccineData["State"], state));
   if (!stateVaccineData.length) throw new Error("No Data for State: " + state);
   stateVaccineData.sort((state1, state2) => {
     const date1 = state1["UpdatedOn"].split("/").reverse().join("");
