@@ -17,7 +17,7 @@ covBot.command("vaccine", async (ctx) => {
     console.log(err);
     await ctx.reply("Could not Fetch Vaccine Data for State: " + state);
   });
-  await ctx.replyWithHTML(getFormattedVaccineData(vaccineData));
+  if (vaccineData) await ctx.replyWithHTML(getFormattedVaccineData(vaccineData));
 });
 
 module.exports = { covBot };
