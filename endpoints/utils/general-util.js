@@ -21,27 +21,27 @@ function getFormattedVaccineData(vaccineData) {
   let secondDoseCount = parseInt(vaccineData["SecondDoseAdministered"]) || 0;
   let totalDoseCount = firstDoseCount + secondDoseCount;
 
-  const vaccineDataHtml = `<pre><strong>${vaccineData["State"]} data as Updated on: </strong>${vaccineData["UpdatedOn"]}
+  const vaccineDataHtml = `<strong>${vaccineData["State"]} data as Updated on: </strong>📅${vaccineData["UpdatedOn"]}
 
 
 <strong>♂️ Males Vaccinated: </strong>${MaleCount} [${getPercent(MaleCount, totalGenderCount)}%]
 <strong>♀️ Females Vaccinated: </strong>${FemaleCount} [${getPercent(FemaleCount, totalGenderCount)}%]
 <strong>⚧️ Transgenders Vaccinated: </strong>${TransgenderCount} [${getPercent(TransgenderCount, totalGenderCount)}%]
-<strong>Total: </strong>${totalGenderCount}
+<strong>📈 Total: </strong>${totalGenderCount}
   
 <strong>👦 18+ Vaccinated: </strong>${eighteenPlusCount} [${getPercent(eighteenPlusCount, totalAgeCount)}%]
 <strong>👨 45+ Vaccinated: </strong>${fortyfivePlusCount} [${getPercent(fortyfivePlusCount, totalAgeCount)}%]
 <strong>👴 60+ Vaccinated: </strong>${sixtyPlusCount} [${getPercent(sixtyPlusCount, totalAgeCount)}%]
-<strong>Total: </strong>${totalAgeCount}
+<strong>📈 Total: </strong>${totalAgeCount}
   
 <strong>🇮🇳 Covaxin Administered: </strong>${covaxinCount} [${getPercent(covaxinCount, totalTypeCount)}%]
 <strong>🇬🇧 Covishield Administered: </strong>${covishieldCount} [${getPercent(covishieldCount, totalTypeCount)}%]
 <strong>🇷🇺 SputnikV Administered: </strong>${sputnikCount} [${getPercent(sputnikCount, totalTypeCount)}%]
-<strong>Total: </strong>${totalTypeCount}
+<strong>📈 Total: </strong>${totalTypeCount}
 
-<strong>1️ First Dose Administered: </strong>${firstDoseCount} [${getPercent(firstDoseCount, totalDoseCount)}%]
-<strong>2️ Second Dose Administered: </strong>${secondDoseCount} [${getPercent(secondDoseCount, totalDoseCount)}%]
-<strong>Total: </strong>${totalDoseCount}</pre>`;
+<strong>🥇 First Dose Administered: </strong>${firstDoseCount} [${getPercent(firstDoseCount, totalDoseCount)}%]
+<strong>🥈 Second Dose Administered: </strong>${secondDoseCount} [${getPercent(secondDoseCount, totalDoseCount)}%]
+<strong>📈 Total: </strong>${totalDoseCount}`;
 
   return vaccineDataHtml;
 }
