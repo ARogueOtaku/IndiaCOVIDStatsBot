@@ -21,7 +21,7 @@ function getFormattedVaccineData(vaccineData) {
   let secondDoseCount = parseInt(vaccineData["SecondDoseAdministered"]) || 0;
   let totalDoseCount = firstDoseCount + secondDoseCount;
 
-  const vaccineDataHtml = `<strong>${vaccineData["State"]} data as Updated on: </strong>📅${vaccineData["UpdatedOn"]}
+  const vaccineDataHtml = `<strong>✔️ ${vaccineData["State"]} data as Updated on: </strong>📅${vaccineData["UpdatedOn"]}
 
 
 <strong>♂️ Males Vaccinated: </strong>${MaleCount} [${getPercent(MaleCount, totalGenderCount)}%]
