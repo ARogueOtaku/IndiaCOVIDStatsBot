@@ -15,7 +15,7 @@ covBot.command("vaccine", async (ctx) => {
   const state = messageArray.join(" ");
   const vaccineData = await getLatestVaccineData(state).catch(async (err) => {
     console.log(err);
-    await ctx.reply("Could not Fetch Data for State: " + state);
+    //await ctx.reply("Could not Fetch Data for State: " + state);
   });
   if (!vaccineData)
     await ctx.replyWithHTML(`<strong>${state}</strong>: No Data found!`);
