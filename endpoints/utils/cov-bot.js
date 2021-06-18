@@ -18,6 +18,7 @@ covBot.command("vaccine", async (ctx) => {
       "<strong>Please Select a state from Below:</strong>",
       Markup.inlineKeyboard(states.map((state) => [Markup.button.callback(state, "vaccine-" + state)]))
     );
+    return;
   }
   const vaccineData = await getLatestVaccineData(state).catch(async (err) => {
     console.log(err);
@@ -27,6 +28,7 @@ covBot.command("vaccine", async (ctx) => {
 });
 
 covBot.on("callback_query", async (ctx) => {
+  await ctx.deleteMessage();
   let state = ctx.callbackQuery.data.split("-")[1];
   if (state) await ctx.reply("Data for " + state);
 });
