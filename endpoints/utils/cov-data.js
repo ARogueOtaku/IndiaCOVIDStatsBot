@@ -64,4 +64,4 @@ async function getLatestVaccineData(state) {
   return stateVaccineData[1];
 }
 
-module.exports = { getLatestVaccineData };
+module.exports = { getLatestVaccineData, states };
