@@ -1,4 +1,4 @@
-const { Telegraf } = require("telegraf");
+const { Telegraf, Markup } = require("telegraf");
 const { getLatestVaccineData } = require("./cov-data");
 const { getFormattedVaccineData } = require("./general-util");
 
@@ -6,6 +6,26 @@ const covBot = new Telegraf(process.env.BOT_TOKEN);
 
 covBot.command("ping", async (ctx) => {
   await ctx.reply("Hello, I'm there! 🙂");
+});
+
+covBot.command("keys", async (ctx) => {
+  await ctx.reply(
+    "Choose 1 from Below:",
+    Markup.inlineKeyboard([
+      Markup.button.callback("Say Hello!", "action-hello"),
+      Markup.button.callback("Say bye!", "action-bye"),
+    ])
+  );
+});
+
+covBot.action("action-hello", async (ctx) => {
+  await ctx.deleteMessage();
+  await ctx.reply("Hello!");
+});
+
+covBot.action("action-bye", async (ctx) => {
+  await ctx.deleteMessage();
+  await ctx.reply("Bye!");
 });
 
 covBot.command("vaccine", async (ctx) => {
