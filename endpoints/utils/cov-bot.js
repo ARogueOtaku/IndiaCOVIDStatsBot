@@ -12,8 +12,8 @@ covBot.command("keys", async (ctx) => {
   await ctx.reply(
     "Choose 1 from Below:",
     Markup.inlineKeyboard([
-      Markup.button.callback("Say Hello!", "action-hello"),
-      Markup.button.callback("Say bye!", "action-bye"),
+      [Markup.button.callback("Say Hello!", "action-hello")],
+      [Markup.button.callback("Say bye!", "action-bye")],
     ])
   );
 });
