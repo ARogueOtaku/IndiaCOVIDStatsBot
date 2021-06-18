@@ -29,8 +29,12 @@ covBot.command("vaccine", async (ctx) => {
 
 covBot.on("callback_query", async (ctx) => {
   await ctx.deleteMessage();
-  let state = ctx.callbackQuery.data.split("-")[1];
-  if (state) await ctx.reply("Data for " + state);
+  let state = ctx.callbackQuery.data.split("-")[1] || "";
+  const vaccineData = await getLatestVaccineData(state).catch(async (err) => {
+    console.log(err);
+    await ctx.replyWithHTML(`<strong>❌ Could not Fetch Vaccine Data for State: </strong>${state}`);
+  });
+  if (vaccineData) await ctx.replyWithHTML(getFormattedVaccineData(vaccineData));
 });
 
 module.exports = { covBot };
