@@ -9,7 +9,7 @@ covBot.command("ping", async (ctx) => {
 });
 
 covBot.command("help", async (ctx) => {
-  const helpHtml = `<strong>🤖 India COVID-Stats Bot 🤖</strong>
+  const helpHtml = `🤖 India COVID-Stats Bot 🤖
 
 💉<strong>/vaccine: </strong> Get Latest Vaccine Data for an Indian State.
 <em>Usage: </em><pre>/vaccine | /vaccine &lt;state&gt;</pre>
