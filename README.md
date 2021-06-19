@@ -1,8 +1,8 @@
-# 🇮🇳 COVID Stats Bot
+# **🇮🇳 COVID Stats Bot**
 
 The **🇮🇳 COVID Stats Bot** is a Telegram Bot Designed to inform Users about Corona Virus related Statistics.
 
-## Commands
+## **Commands**
 
 | CMD      | DESCRIPTION                                                      | USAGE                          |
 | -------- | ---------------------------------------------------------------- | ------------------------------ |
@@ -10,7 +10,7 @@ The **🇮🇳 COVID Stats Bot** is a Telegram Bot Designed to inform Users abou
 | /stat    | Get Latest Active/Recovered and other Stats for an Indian State. | `/stats OR /stats <state>`     |
 | /help    | Show Help Menu                                                   | `/help`                        |
 
-## States
+## **States**
 
 The `/vaccine` and `/stats` command both accept a `<state>` value as an argument to the command.
 Below you can find a List of all Available `<state>` values.
@@ -53,13 +53,20 @@ Below you can find a List of all Available `<state>` values.
   - _Uttarakhand_
   - _West Bengal_
 
-## FAQ
+## **FAQ**
 
-- **Where do I get this Bot?**
-  - Open this [Link](https://t.me/cov19VaccineNumbersBot) with Telegram _App_ and start a Conversation with `/start`. You can also _Search_ Telegram by the Username `@cov19VaccineNumbersBot` and _Add_ it to your _Group_.
-- **What Tech Stacks are used to create this Bot**?
-  - This Bot was created in _Node.js 12_, using _Telegraf_ NPM Library and it is hosted in _Netlify_.
-- **Is there a way I can see the Source Code for this Bot?**
-  - Absolutely, The Full Source Code for this Bot can found [Here](https://github.com/ARogueOtaku/covBot).
-- **Where does this bot get the Data from**?
-  - All Data this bot is reporting is provided and fetched from [COVID19-India API](https://api.covid19india.org/).
+#### **1. Where do I get this Bot?**
+
+Open this [Link](https://t.me/cov19VaccineNumbersBot) with Telegram _App_ and start a Conversation with `/start`. You can also _Search_ Telegram by the Username `@cov19VaccineNumbersBot` and _Add_ it to your _Group_.
+
+#### **2. What Tech Stacks are used to create this Bot**?
+
+This Bot was created in _Node.js 12_, using _Telegraf_ NPM Library and it is hosted in _Netlify_.
+
+#### **3. Is there a way I can see the Source Code for this Bot?**
+
+Absolutely, The Full Source Code for this Bot can found [Here](https://github.com/ARogueOtaku/covBot).
+
+#### **4. Where does this bot get the Data from**?
+
+All Data this bot is reporting is provided and fetched from [COVID19-India API](https://api.covid19india.org/).
