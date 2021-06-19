@@ -57,10 +57,10 @@ function getFormattedStats(affectedData) {
 
   const affectedDataHTML = `<strong>✔️ ${affectedData["state"]} data as Updated on: </strong>📅${UpdatedOn}
 
-<strong>🦠 Confirmed Cases: ${confirmedCases} [+${deltaConfirmed}]</strong>
-<strong>😷 Active Cases: ${activeCases}</strong>
-<strong>⚰️ Deaths: ${deathCases} [+${deltaDeaths}]</strong>
-<strong>💪 Recovered Cases: ${recoveredCases} [+${deltaRecovered}]</strong>`;
+<strong>🦠 Confirmed Cases: </strong>${confirmedCases} [+${deltaConfirmed}]
+<strong>😷 Active Cases: </strong>${activeCases}
+<strong>⚰️ Deaths: </strong>${deathCases} [+${deltaDeaths}]
+<strong>💪 Recovered Cases: </strong>${recoveredCases} [+${deltaRecovered}]`;
 
   return affectedDataHTML;
 }
