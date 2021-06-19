@@ -7,7 +7,7 @@ The **🇮🇳 COVID Stats Bot** is a Telegram Bot Designed to inform Users abou
 | CMD      | DESCRIPTION                                                      | USAGE                          |
 | -------- | ---------------------------------------------------------------- | ------------------------------ |
 | /vaccine | Get Latest Vaccine Data for an Indian State.                     | `/vaccine OR /vaccine <state>` |
-| /stat    | Get Latest Active/Recovered and other Stats for an Indian State. | `/stats OR /stats <state>`     |
+| /stats   | Get Latest Active/Recovered and other Stats for an Indian State. | `/stats OR /stats <state>`     |
 | /help    | Show Help Menu                                                   | `/help`                        |
 
 ## **States**
