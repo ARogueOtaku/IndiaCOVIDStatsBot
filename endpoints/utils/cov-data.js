@@ -64,4 +64,20 @@ async function getLatestVaccineData(state) {
   return stateVaccineData[1];
 }
 
-module.exports = { getLatestVaccineData, states };
+async function getAffectedData(state) {
+  const affectedDataResponse = await fetch("https://api.covid19india.org/data.json");
+  const affectedDataJson = await affectedDataResponse.json();
+  const allAffectedData = affectedDataJson["statewise"];
+  if (!allAffectedData) throw new Error("No Data for State: " + state);
+  const stateAffectedData = allAffectedData.filter(
+    (affectedData) =>
+      (state === "India" && affectedData["state"] === "Total") || areSameStates(state, affectedData["state"])
+  );
+  return stateAffectedData;
+}
+
+(async function () {
+  console.log(await getAffectedData("India"));
+})();
+
+module.exports = { getLatestVaccineData, getAffectedData, states };

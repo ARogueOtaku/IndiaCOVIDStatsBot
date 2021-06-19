@@ -23,7 +23,6 @@ function getFormattedVaccineData(vaccineData) {
 
   const vaccineDataHtml = `<strong>✔️ ${vaccineData["State"]} data as Updated on: </strong>📅${vaccineData["UpdatedOn"]}
 
-
 <strong>♂️ Males Vaccinated: </strong>${MaleCount} [${getPercent(MaleCount, totalGenderCount)}%]
 <strong>♀️ Females Vaccinated: </strong>${FemaleCount} [${getPercent(FemaleCount, totalGenderCount)}%]
 <strong>⚧️ Transgenders Vaccinated: </strong>${TransgenderCount} [${getPercent(TransgenderCount, totalGenderCount)}%]
@@ -46,4 +45,24 @@ function getFormattedVaccineData(vaccineData) {
   return vaccineDataHtml;
 }
 
-module.exports = { getFormattedVaccineData };
+function getFormattedStats(affectedData) {
+  let activeCases = affectedData["active"] || 0;
+  let confirmedCases = affectedData["confirmed"] || 0;
+  let deltaConfirmed = affectedData["deltaconfirmed"] || 0;
+  let deathCases = affectedData["deaths"] || 0;
+  let deltaDeaths = affectedData["deltadeaths"] || 0;
+  let recoveredCases = affectedData["recovered"] || 0;
+  let deltaRecovered = affectedData["deltarecovered"] || 0;
+  let UpdatedOn = (affectedData["lastupdatedtime"] || "").split(" ")[0];
+
+  const affectedDataHTML = `<strong>✔️ ${affectedData["state"]} data as Updated on: </strong>📅${UpdatedOn}
+
+<strong>🦠 Confirmed Cases: ${confirmedCases} [+${deltaConfirmed}]</strong>
+<strong>😷 Active Cases: ${activeCases}</strong>
+<strong>⚰️ Deaths: ${deathCases} [+${deltaDeaths}]</strong>
+<strong>💪 Recovered Cases: ${recoveredCases} [+${deltaRecovered}]</strong>`;
+
+  return affectedDataHTML;
+}
+
+module.exports = { getFormattedVaccineData, getFormattedStats };
