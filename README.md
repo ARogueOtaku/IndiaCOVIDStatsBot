@@ -65,7 +65,7 @@ This Bot was created in _Node.js 12_, using _Telegraf_ NPM Library and it is hos
 
 #### **3. Is there a way I can see the Source Code for this Bot?**
 
-Absolutely, The Full Source Code for this Bot can found [Here](https://github.com/ARogueOtaku/covBot).
+Absolutely, The Full Source Code for this Bot can found [Here](https://github.com/ARogueOtaku/IndiaCOVIDStatsBot).
 
 #### **4. Where does this bot get the Data from**?
 
