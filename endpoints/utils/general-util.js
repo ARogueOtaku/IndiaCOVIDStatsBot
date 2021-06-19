@@ -21,7 +21,7 @@ function getFormattedVaccineData(vaccineData) {
   let secondDoseCount = parseInt(vaccineData["SecondDoseAdministered"]) || 0;
   let totalDoseCount = firstDoseCount + secondDoseCount;
 
-  const vaccineDataHtml = `<strong>✔️ ${vaccineData["State"]} data as Updated on: </strong>📅${vaccineData["UpdatedOn"]}
+  const vaccineDataHtml = `<strong>💉 ${vaccineData["State"]} data as Updated on: </strong>📅${vaccineData["UpdatedOn"]}
 
 <strong>♂️ Males Vaccinated: </strong>${MaleCount} [${getPercent(MaleCount, totalGenderCount)}%]
 <strong>♀️ Females Vaccinated: </strong>${FemaleCount} [${getPercent(FemaleCount, totalGenderCount)}%]
@@ -55,7 +55,7 @@ function getFormattedStats(affectedData) {
   let deltaRecovered = affectedData["deltarecovered"] || 0;
   let UpdatedOn = (affectedData["lastupdatedtime"] || "").split(" ")[0];
 
-  const affectedDataHTML = `<strong>✔️ ${affectedData["state"]} data as Updated on: </strong>📅${UpdatedOn}
+  const affectedDataHTML = `<strong>📊 ${affectedData["state"]} data as Updated on: </strong>📅${UpdatedOn}
 
 <strong>🦠 Confirmed Cases: </strong>${confirmedCases} [+${deltaConfirmed}]
 <strong>😷 Active Cases: </strong>${activeCases}

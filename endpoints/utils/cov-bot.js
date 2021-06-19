@@ -9,15 +9,15 @@ covBot.command("ping", async (ctx) => {
 });
 
 covBot.command("help", async (ctx) => {
-  const helpHtml = `<strong>India COVID-Stats Bot Commands:</strong>
+  const helpHtml = `<strong>🤖 India COVID-Stats Bot 🤖</strong>
 
-<strong>/vaccine: </strong> Get Latest Vaccine Data for an Indian State.
+💉<strong>/vaccine: </strong> Get Latest Vaccine Data for an Indian State.
 <em>Usage: </em><pre>/vaccine | /vaccine &lt;state&gt;</pre>
 
-<strong>/stats: </strong> Get LatestActive/Recovered and other Stats for an Indian State.
+📊<strong>/stats: </strong> Get LatestActive/Recovered and other Stats for an Indian State.
 <em>Usage: </em><pre>/stats | /stats &lt;state&gt;</pre>
 
-<strong>/help: </strong> Bring this Menu up again.
+ℹ️<strong>/help: </strong> Bring this Menu up again.
 <em>Usage: </em><pre>/help</pre>`;
 
   ctx.replyWithHTML(helpHtml);
