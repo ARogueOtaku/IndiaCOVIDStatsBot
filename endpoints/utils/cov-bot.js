@@ -8,6 +8,15 @@ covBot.command("ping", async (ctx) => {
   await ctx.reply("Hello, I'm there! 🙂");
 });
 
+covBot.command("help", async (ctx) => {
+  const helpHtml = `<strong>India COVID-Stats Bot Commands:</strong>
+
+♦<strong>/vaccine: </strong> Get Latest Vaccine Data for an Indian State.
+<pre><strong><em>Usage: </em></strong>/vaccine | /vaccine &ltstate&gt</pre>`;
+
+  ctx.replyWithHTML(helpHtml);
+});
+
 covBot.command("vaccine", async (ctx) => {
   await ctx.replyWithChatAction("typing");
   const messageArray = ctx.message.text.split(" ");
