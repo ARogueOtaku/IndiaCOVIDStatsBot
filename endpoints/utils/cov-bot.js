@@ -11,8 +11,14 @@ covBot.command("ping", async (ctx) => {
 covBot.command("help", async (ctx) => {
   const helpHtml = `<strong>India COVID-Stats Bot Commands:</strong>
 
-♦<strong>/vaccine: </strong> Get Latest Vaccine Data for an Indian State.
-<pre><strong><em>Usage: </em></strong>/vaccine | /vaccine &ltstate&gt</pre>`;
+<strong>/vaccine: </strong> Get Latest Vaccine Data for an Indian State.
+<em>Usage: </em><pre>/vaccine | /vaccine &ltstate&gt</pre>
+
+<strong>/stats: </strong> Get LatestActive/Recovered and other Stats for an Indian State.
+<em>Usage: </em><pre>/stats | /stats &ltstate&gt</pre>
+
+<strong>/help: </strong> Bring this Menu up again.
+<em>Usage: </em><pre>/help</pre>`;
 
   ctx.replyWithHTML(helpHtml);
 });
