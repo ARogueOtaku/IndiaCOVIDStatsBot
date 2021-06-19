@@ -73,7 +73,7 @@ async function getAffectedData(state) {
     (affectedData) =>
       (state === "India" && affectedData["state"] === "Total") || areSameStates(state, affectedData["state"])
   );
-  if (!allAffectedData.length) throw new Error("No Data for State: " + state);
+  if (!stateAffectedData.length) throw new Error("No Data for State: " + state);
 
   return stateAffectedData[0];
 }
