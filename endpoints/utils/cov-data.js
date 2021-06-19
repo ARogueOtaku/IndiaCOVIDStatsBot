@@ -73,11 +73,9 @@ async function getAffectedData(state) {
     (affectedData) =>
       (state === "India" && affectedData["state"] === "Total") || areSameStates(state, affectedData["state"])
   );
-  return stateAffectedData;
-}
+  if (!allAffectedData.length) throw new Error("No Data for State: " + state);
 
-(async function () {
-  console.log(await getAffectedData("India"));
-})();
+  return stateAffectedData[0];
+}
 
 module.exports = { getLatestVaccineData, getAffectedData, states };
